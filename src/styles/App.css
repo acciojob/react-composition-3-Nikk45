@@ -5,10 +5,10 @@
 }
 
 .tooltip:hover .tooltiptext{
-    display: block;
+    visibility: visible;
 }
 
 .tooltiptext{
-    display: none;
+    visibility: hidden;
     background-color: red;
 }
