@@ -18,7 +18,7 @@ const Tooltip = ({text, children})=>{
         e.target.id==='2' && setVisible2(false);
     }
 
-    
+
 
     return(
         <>
@@ -27,11 +27,11 @@ const Tooltip = ({text, children})=>{
                     visible1 && <div className="tooltiptext" >{text[0]}</div>
                 }
             </h2>
-            <div id="2" className="tooltip" onMouseLeave={hide} onMouseEnter={show}>{children[1]}
+            <p id="2" className="tooltip" onMouseLeave={hide} onMouseEnter={show}>{children[1]}
                 {
                    visible2 && <div className="tooltiptext">{text[1]}</div>
                 }
-            </div>
+            </p>
         </>
     )
 }
