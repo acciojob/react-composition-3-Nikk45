@@ -4,11 +4,11 @@
     width: fit-content;
 }
 
-.tooltip:hover .tooltiptext{
+/* .tooltip:hover .tooltiptext{
     visibility: visible;
-}
+} */
 
 .tooltiptext{
-    visibility: hidden;
+    /* visibility: hidden; */
     background-color: red;
 }
