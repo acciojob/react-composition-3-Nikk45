@@ -1,14 +1,14 @@
 
-.tooltiptext{
+.tooltip{
     background-color: wheat;
     width: fit-content;
 }
 
-.tooltiptext:hover .tooltip{
+.tooltip:hover .tooltiptext{
     display: block;
 }
 
-.tooltip{
+.tooltiptext{
     display: none;
     background-color: red;
 }
