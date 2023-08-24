@@ -22,10 +22,11 @@ const Tooltip = ({text, children})=>{
 
     return(
         <>
-            <h2 id="1" className="tooltip" onMouseLeave={hide} onMouseEnter={show}>{children[0]}
+            <h2 id="1" className="tooltip" onMouseLeave={hide} onMouseEnter={show}>
                 {
                     visible1 && <div className="tooltiptext" >{text[0]}</div>
                 }
+                {children[0]}
             </h2>
             <p id="2" className="tooltip" onMouseLeave={hide} onMouseEnter={show}>{children[1]}
                 {
