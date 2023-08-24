@@ -3,11 +3,11 @@ import React from "react";
 const Tooltip = ({text, children})=>{
     return(
         <>
-            <h1 className="tooltip">{children[0]}
-                <h1 className="tooltiptext">{text[0]}</h1>
-            </h1>
+            <h2 className="tooltip">{children[0]}
+                <div className="tooltiptext">{text[0]}</div>
+            </h2>
             <p className="tooltip">{children[1]}
-                <p className="tooltiptext">{text[1]}</p>
+                <div className="tooltiptext">{text[1]}</div>
             </p>
         </>
     )
