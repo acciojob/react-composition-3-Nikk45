@@ -22,7 +22,7 @@ const Tooltip = ({text, children})=>{
 
     return(
         <>
-            <h2 id="1" className="tooltip" onMouseLeave={hide} onMouseEnter={show}>
+            <h2 id="1" className="tooltip" onMouseLeave={hide} onMouseEnter={show}>{children[0]}
                 {
                     visible1 && <div className="tooltiptext" >{text[0]}</div>
                 }
