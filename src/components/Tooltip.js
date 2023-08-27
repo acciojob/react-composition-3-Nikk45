@@ -10,11 +10,11 @@ const Tooltip = ({ text, children }) => {
   const handleMouseLeave = () => {
     setShowTooltip(false);
   };
-
+console.log(children);
   return (
     <div className="tooltip-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       {children}
-      {showTooltip && <h1 className="tooltiptext">{text}</h1>}
+      {showTooltip && <children.type className="tooltiptext">{text}</children.type>}
     </div>
   );
 };
