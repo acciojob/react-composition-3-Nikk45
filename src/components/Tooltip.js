@@ -14,7 +14,9 @@ console.log(children);
   return (
     <div className="tooltip-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       {children}
-      {showTooltip && <children.type className="tooltiptext">{text}</children.type>}
+      <div>
+        {showTooltip && <children.type className="tooltiptext">{text}</children.type>}
+      </div>
     </div>
   );
 };
