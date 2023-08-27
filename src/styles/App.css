@@ -1,4 +1,4 @@
-
+/* 
 .tooltip{
     background-color: wheat;
     width: fit-content;
@@ -8,7 +8,7 @@
     visibility: visible;
 } */
 
-.tooltiptext{
+/* .tooltiptext{ */
     /* visibility: hidden; */
-    background-color: red;
-}
+    /* background-color: red; */
+/* } */ 

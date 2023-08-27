@@ -1,39 +1,22 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-const Tooltip = ({text, children})=>{
+const Tooltip = ({ text, children }) => {
+  const [showTooltip, setShowTooltip] = useState(false);
 
-    const [visible1,setVisible1] = useState(false);
-    const [visible2,setVisible2] = useState(false);
+  const handleMouseEnter = () => {
+    setShowTooltip(true);
+  };
 
-    const show=(e)=>{
-        // console.log(e.target.children);
-        console.log('mouse enter');
-        e.target.id==='1' && setVisible1(true)
-        e.target.id==='2' && setVisible2(true)
-    }
+  const handleMouseLeave = () => {
+    setShowTooltip(false);
+  };
 
-    const hide=(e)=>{
-        console.log('mouse leave');
-        e.target.id==='1' && setVisible1(false);
-        e.target.id==='2' && setVisible2(false);
-    }
+  return (
+    <div className="tooltip-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      {children}
+      {showTooltip && <h1 className="tooltiptext">{text}</h1>}
+    </div>
+  );
+};
 
-
-
-    return(
-        <>
-            <h2 id="1" className="tooltip" onMouseLeave={hide} onMouseEnter={show}>{children[0]}
-                {
-                    visible1 && <div>{text[0]}</div>
-                }
-            </h2>
-            <p id="2" className="tooltip" onMouseLeave={hide} onMouseEnter={show}>{children[1]}
-                {
-                   visible2 && <div className="tooltiptext">{text[1]}</div>
-                }
-            </p>
-        </>
-    )
-}
-
-export default Tooltip
+export default Tooltip;

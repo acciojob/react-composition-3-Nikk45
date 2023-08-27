@@ -5,13 +5,16 @@ import Tooltip from "./Tooltip";
 
 const App = () => {
 
-  let children = ["Hover over me", "Hover over me to see another tooltip"];
-  let text = ["This is a tooltip","This is another tooltip"];
-
   return (
     <div>
         {/* Do not remove the main div */}
-        <Tooltip text={text} children={children} />
+        <Tooltip text="This is a tooltip">
+        <h1 className="tooltip">Hover over me</h1>
+      </Tooltip>
+      
+      <Tooltip text="This is another tooltip">
+        <p className="tooltip">Hover over me to see another tooltip</p>
+      </Tooltip>
     </div>
   )
 }
